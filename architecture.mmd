@@ -1,0 +1,11 @@
+flowchart TD
+    A[User enters device details] --> B[Validate required fields]
+    B --> C{Valid input?}
+    C -- No --> D[Show validation message]
+    D --> A
+    C -- Yes --> E[Create unique demo request ID]
+    E --> F[Save request in browser localStorage]
+    F --> G[Display dashboard and request status]
+    G --> H[User updates demo status]
+    H --> F
+    G --> I[Export request summary as CSV]

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EcoDispose is a student prototype for responsible electronic-waste collection and recycling.">
+<title>EcoDispose | E-Waste, Responsibly</title>
+<style>
+:root{--ink:#17352d;--green:#24745a;--lime:#d9f27b;--paper:#f7f8f2;--white:#fff;--muted:#65766e;--line:#e0e8df;--orange:#f3a65a;--red:#c95e4b;--shadow:0 12px 35px rgba(24,60,45,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+button,input,select,textarea{font:inherit}button,a{cursor:pointer}a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:19px 0;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:1.18rem;letter-spacing:-.04em}.brand-icon{width:38px;height:38px;background:var(--lime);border-radius:12px;display:grid;place-items:center;font-size:21px}.navlinks{display:flex;gap:24px;align-items:center;font-size:.93rem}.navlinks a{text-decoration:none;color:#4e6258}.navlinks a:hover{color:var(--green)}.btn{border:0;border-radius:999px;padding:12px 18px;font-weight:750;display:inline-flex;justify-content:center;align-items:center;gap:8px;text-decoration:none;transition:.2s}.btn-primary{background:var(--green);color:white}.btn-primary:hover{background:#185940;transform:translateY(-1px)}.btn-light{background:white;border:1px solid var(--line);color:var(--ink)}.btn-lime{background:var(--lime);color:var(--ink)}.hero{padding:52px 0 58px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;font-size:.74rem;letter-spacing:.14em;font-weight:850;color:var(--green)}.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}h1{font-size:clamp(2.8rem,6vw,5.1rem);line-height:.99;letter-spacing:-.075em;margin:19px 0 22px;max-width:650px}h1 span{color:var(--green)}.hero p{font-size:1.08rem;color:var(--muted);max-width:530px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-art{min-height:365px;border-radius:32px;background:#dfeccf;position:relative;overflow:hidden;display:grid;place-items:center}.sun{position:absolute;width:235px;height:235px;border-radius:50%;background:#c8e68c;right:5%;top:4%}.orb{position:absolute;width:310px;height:310px;border-radius:50%;border:1px solid rgba(36,116,90,.18);left:-100px;bottom:-160px}.device{position:relative;width:245px;height:285px;border-radius:26px;background:#183d32;box-shadow:0 25px 35px #254c3733;transform:rotate(-5deg);padding:15px;color:white}.device-top{display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:#d8e8d9}.screen{background:#f8fbf2;border-radius:17px;margin-top:14px;height:220px;color:var(--ink);padding:15px}.screen-title{font-weight:850;font-size:1.05rem}.screen-sub{font-size:.68rem;color:var(--muted)}.screen-bin{display:flex;align-items:center;gap:12px;background:#e9f2df;padding:11px;border-radius:12px;margin-top:12px}.bin-emoji{font-size:28px}.progress{height:7px;border-radius:10px;background:#d2dfd1;margin-top:7px;overflow:hidden}.progress span{display:block;height:100%;width:82%;background:var(--green);border-radius:10px}.floating{position:absolute;bottom:36px;left:5%;background:white;padding:13px 17px;border-radius:15px;box-shadow:var(--shadow);font-size:.85rem;font-weight:750}.floating b{color:var(--green)}.section{padding:58px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-.055em;margin:6px 0}.section-head p{color:var(--muted);max-width:520px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid var(--line);border-radius:22px;padding:23px;box-shadow:0 5px 20px #193c2b05}.card-icon{width:48px;height:48px;border-radius:15px;background:#edf5e4;display:grid;place-items:center;font-size:24px}.card h3{margin:17px 0 7px;letter-spacing:-.025em}.card p{margin:0;color:var(--muted);font-size:.94rem}.app-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:24px;padding:25px;box-shadow:var(--shadow)}.panel h2,.panel h3{letter-spacing:-.04em;margin:0 0 7px}.muted{color:var(--muted)}.small{font-size:.83rem}.field{display:flex;flex-direction:column;gap:6px;margin-top:15px}.field label{font-weight:750;font-size:.87rem}.field input,.field select,.field textarea{border:1px solid #d8e3d8;background:#fbfcf8;border-radius:11px;padding:12px 13px;width:100%;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px #24745a18}.field textarea{min-height:75px;resize:vertical}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 13px}.full{grid-column:1/-1}.notice{padding:12px 14px;background:#f0f6e9;border-radius:12px;font-size:.83rem;color:#4b6253;margin:15px 0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:20px 0}.stat{padding:15px;background:#f5f8f1;border-radius:15px}.stat strong{display:block;font-size:1.8rem;letter-spacing:-.05em}.stat span{font-size:.78rem;color:var(--muted)}.filters{display:flex;gap:10px;margin:17px 0;flex-wrap:wrap}.filters input,.filters select{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px;min-width:130px}.request-list{display:grid;gap:11px}.request{border:1px solid var(--line);border-radius:15px;padding:15px;display:grid;grid-template-columns:1fr auto;gap:12px}.request h4{margin:0 0 4px}.request p{margin:0;color:var(--muted);font-size:.84rem}.status{font-size:.72rem;font-weight:850;border-radius:999px;padding:5px 9px;background:#edf4dc;color:#376247;height:max-content;white-space:nowrap}.status.Scheduled{background:#fff0dc;color:#86531b}.status.Collected{background:#e0f3e7;color:#216a45}.status.Submitted{background:#e8efff;color:#35589b}.request-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.mini-btn{border:1px solid var(--line);background:white;border-radius:8px;padding:6px 9px;font-size:.76rem;font-weight:750;color:var(--ink)}.center-list{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.center{background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px}.center .type{font-size:.72rem;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.09em}.center h3{font-size:1rem;margin:8px 0}.center p{font-size:.84rem;color:var(--muted);margin:0 0 13px}.tag{font-size:.7rem;background:#fff2dc;color:#805522;padding:5px 8px;border-radius:8px;display:inline-block}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{padding:19px;border-top:3px solid var(--green);background:#fff;border-radius:0 0 15px 15px}.step .num{font-size:.72rem;font-weight:850;color:var(--green);letter-spacing:.1em}.step h3{font-size:1rem;margin:8px 0}.step p{font-size:.84rem;color:var(--muted);margin:0}.footer{padding:28px 0 38px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:.84rem}.toast{position:fixed;bottom:22px;right:22px;background:#17352d;color:white;padding:14px 18px;border-radius:12px;box-shadow:var(--shadow);max-width:min(380px,90vw);display:none;z-index:10}.empty{padding:25px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}.disclaimer{border-left:3px solid var(--orange);padding:10px 13px;background:#fff8ef;color:#73512d;font-size:.81rem;border-radius:0 9px 9px 0}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:28px;gap:28px}.hero-art{min-height:320px}.cards,.center-list{grid-template-columns:1fr}.app-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.navlinks{gap:12px}.navlinks a:not(.btn){display:none}.section{padding:40px 0}.section-head{align-items:start;flex-direction:column}.footer{flex-direction:column}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:1.45rem}}
+@media(max-width:440px){.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.steps{grid-template-columns:1fr}.panel{padding:18px}.request{grid-template-columns:1fr}.status{justify-self:start}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#home" style="text-decoration:none"><span class="brand-icon">♻</span> EcoDispose</a>
+    <div class="navlinks"><a href="#how">How it works</a><a href="#centers">Collection options</a><a href="#dashboard">Dashboard</a><a class="btn btn-primary" href="#dispose">Dispose responsibly ↗</a></div>
+  </nav>
+</header>
+<main>
+<section class="wrap hero" id="home">
+  <div>
+    <div class="eyebrow"><span class="dot"></span> A student-built sustainability concept</div>
+    <h1>Old tech.<br><span>Better future.</span></h1>
+    <p>Make responsible e-waste disposal easier. Record an unwanted device, explore collection options, and keep track of your disposal request in one simple place.</p>
+    <div class="actions"><a class="btn btn-primary" href="#dispose">Start a disposal request ↗</a><a class="btn btn-light" href="#how">Explore the process ↓</a></div>
+    <p class="small">Phones · Laptops · Chargers · Small electronics · Batteries</p>
+  </div>
+  <div class="hero-art" aria-label="Illustration of a digital e-waste tracking dashboard">
+    <div class="sun"></div><div class="orb"></div>
+    <div class="device"><div class="device-top"><b>ECODISPOSE</b><span>● ● ●</span></div><div class="screen"><div class="screen-title">Your e-waste</div><div class="screen-sub">A little action adds up.</div><div class="screen-bin"><span class="bin-emoji">📱</span><div><b>Old smartphone</b><div class="screen-sub">Ready for collection</div><div class="progress"><span></span></div></div></div><div class="screen-bin"><span class="bin-emoji">💻</span><div><b>Old laptop</b><div class="screen-sub">Find a recycling option</div></div></div><div style="margin-top:14px;background:#d9f27b;padding:9px;border-radius:10px;text-align:center;font-size:.72rem;font-weight:850">SMALL DEVICE. BIG IMPACT.</div></div></div>
+    <div class="floating">♻ <b>Reuse. Repair. Recycle.</b></div>
+  </div>
+</section>
+<section class="section" style="background:#eef3e8">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">The problem</div><h2>Electronic waste needs a better route.</h2></div><p>Discarded electronics can contain hazardous materials as well as valuable recoverable resources. They should not be mixed with ordinary household waste.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-icon">🧪</div><h3>Protect the environment</h3><p>Improper handling can release harmful substances into soil and water. Use appropriate collection and recycling channels.</p></article>
+      <article class="card"><div class="card-icon">🔩</div><h3>Recover useful materials</h3><p>Responsible recycling can recover materials and components, reducing the need for some newly extracted resources.</p></article>
+      <article class="card"><div class="card-icon">📍</div><h3>Make disposal simpler</h3><p>A clear request and collection workflow helps people identify the next step instead of leaving old devices unused or discarding them incorrectly.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section wrap" id="dispose">
+  <div class="section-head"><div><div class="eyebrow">Try the prototype</div><h2>Record your e-waste.</h2></div><p>This demonstration stores requests in this browser only. Use fictional details while testing.</p></div>
+  <div class="app-grid">
+    <form class="panel" id="ewasteForm">
+      <h2>Disposal request</h2><p class="muted small">Fill in the device details to create a sample tracking record.</p>
+      <div class="form-grid">
+        <div class="field"><label for="device">Device category *</label><select id="device" required><option value="">Choose a device</option><option>Mobile phone</option><option>Laptop / computer</option><option>Charger / cable</option><option>Battery</option><option>Television / monitor</option><option>Small household electronics</option><option>Other electronic item</option></select></div>
+        <div class="field"><label for="quantity">Quantity *</label><input id="quantity" type="number" min="1" max="999" value="1" required></div>
+        <div class="field"><label for="condition">Condition</label><select id="condition"><option>Not working</option><option>Working</option><option>Damaged</option><option>Unsure</option></select></div>
+        <div class="field"><label for="method">Preferred method *</label><select id="method" required><option>Drop-off at collection centre</option><option>Pickup request</option><option>Repair or reuse first</option></select></div>
+        <div class="field full"><label for="area">Area / locality (no full home address) *</label><input id="area" placeholder="e.g., Jayanagar, Bengaluru" required maxlength="90"></div>
+        <div class="field full"><label for="notes">Additional notes (optional)</label><textarea id="notes" placeholder="e.g., one old phone and its charger" maxlength="250"></textarea></div>
+      </div>
+      <div class="notice">Privacy note: this prototype saves data in your browser only. Do not enter your phone number, exact address, or other sensitive personal information.</div>
+      <button class="btn btn-primary" type="submit" style="width:100%">Create demo request ↗</button>
+    </form>
+    <div class="panel" id="dashboard">
+      <div style="display:flex;justify-content:space-between;gap:15px;align-items:start"><div><h2>My disposal dashboard</h2><p class="muted small">Your requests on this device</p></div><button class="mini-btn" id="exportBtn" type="button">Export CSV ↓</button></div>
+      <div class="stats"><div class="stat"><strong id="totalCount">0</strong><span>Total requests</span></div><div class="stat"><strong id="itemCount">0</strong><span>Items recorded</span></div><div class="stat"><strong id="doneCount">0</strong><span>Marked collected</span></div></div>
+      <div class="filters"><input id="search" placeholder="Search device or area" aria-label="Search requests"><select id="statusFilter" aria-label="Filter by status"><option value="All">All statuses</option><option>Submitted</option><option>Scheduled</option><option>Collected</option></select></div>
+      <div class="request-list" id="requestList"><div class="empty">No requests yet. Submit the form to create your first demo record.</div></div>
+      <div class="disclaimer" style="margin-top:15px">Statuses are simulated for demonstration. “Collected” means you manually updated the sample record; it does not verify a real-world recycling event.</div>
+    </div>
+  </div>
+</section>
+<section class="section" id="centers" style="background:#eef3e8">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Choose the right route</div><h2>Collection options</h2></div><p>These are example categories, not verified local business listings. Check current authorization, accepted items, and hours before handing over e-waste.</p></div>
+    <div class="center-list">
+      <article class="center"><div class="type">Option 01</div><h3>Authorized e-waste recycler</h3><p>For electronics intended for dismantling and material recovery through an appropriate recycling process.</p><span class="tag">Verify authorization first</span></article>
+      <article class="center"><div class="type">Option 02</div><h3>Brand take-back programme</h3><p>Some manufacturers and retailers offer take-back or collection options for selected devices.</p><span class="tag">Check accepted products</span></article>
+      <article class="center"><div class="type">Option 03</div><h3>Local collection drive</h3><p>Schools, colleges, resident groups, or civic bodies may organize scheduled collection events.</p><span class="tag">Confirm event details</span></article>
+    </div>
+    <div class="notice" style="margin-top:17px">Safety: do not dismantle devices or puncture batteries. Keep damaged or swollen batteries away from heat and follow local guidance for safe handling.</div>
+  </div>
+</section>
+<section class="section wrap" id="how">
+  <div class="section-head"><div><div class="eyebrow">System workflow</div><h2>Input → Processing → Output</h2></div><p>The core logic behind the proposed digital solution.</p></div>
+  <div class="steps">
+    <article class="step"><div class="num">01 / INPUT</div><h3>Capture details</h3><p>Device category, quantity, condition, area, and preferred disposal method.</p></article>
+    <article class="step"><div class="num">02 / PROCESS</div><h3>Validate & classify</h3><p>Check required fields, categorize the item, and create a unique request ID.</p></article>
+    <article class="step"><div class="num">03 / MATCH</div><h3>Choose a route</h3><p>Present suitable disposal options for the user to verify and select.</p></article>
+    <article class="step"><div class="num">04 / OUTPUT</div><h3>Track & summarize</h3><p>Display request status, item totals, and a downloadable CSV summary.</p></article>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap panel" style="background:#17352d;color:white;display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap;padding:30px">
+    <div><div class="eyebrow" style="color:#d9f27b">Better habits, cleaner future</div><h2 style="font-size:2rem;letter-spacing:-.05em;margin:8px 0">Repair when possible.<br>Recycle responsibly.</h2><p style="color:#d0dfd5;margin:0">EcoDispose · Environmental Studies prototype</p></div>
+    <a class="btn btn-lime" href="#dispose">Create a demo request ↑</a>
+  </div>
+</section>
+</main>
+<footer class="wrap footer"><span><b>EcoDispose</b> · Student project prototype</span><span>Demo only · No real collection service or live recycler integration</span></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const STORAGE_KEY='ecodispose_demo_requests_v1';
+let requests=[];
+try{requests=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');if(!Array.isArray(requests))requests=[]}catch(e){requests=[]}
+const $=id=>document.getElementById(id);
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(requests))}catch(e){notify('Browser storage is unavailable. Your request may not persist after refresh.')}render()}
+function notify(message){const t=$('toast');t.textContent=message;t.style.display='block';clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.style.display='none',3500)}
+function esc(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){
+ const q=$('search').value.trim().toLowerCase(), f=$('statusFilter').value;
+ const filtered=requests.filter(r=>(f==='All'||r.status===f)&&(`${r.device} ${r.area} ${r.id}`.toLowerCase().includes(q)));
+ $('totalCount').textContent=requests.length;
+ $('itemCount').textContent=requests.reduce((n,r)=>n+Number(r.quantity||0),0);
+ $('doneCount').textContent=requests.filter(r=>r.status==='Collected').length;
+ if(!filtered.length){$('requestList').innerHTML='<div class="empty">'+(requests.length?'No requests match your search.':'No requests yet. Submit the form to create your first demo record.')+'</div>';return}
+ $('requestList').innerHTML=filtered.slice().reverse().map(r=>`<article class="request"><div><h4>${esc(r.device)} <span class="muted">× ${esc(r.quantity)}</span></h4><p>${esc(r.area)} · ${esc(r.method)}</p><p style="margin-top:4px">ID: ${esc(r.id)} · ${esc(r.date)}</p><div class="request-actions">${r.status!=='Scheduled'?`<button class="mini-btn" data-action="Scheduled" data-id="${esc(r.id)}">Mark scheduled</button>`:''}${r.status!=='Collected'?`<button class="mini-btn" data-action="Collected" data-id="${esc(r.id)}">Mark collected</button>`:''}<button class="mini-btn" data-action="Delete" data-id="${esc(r.id)}">Delete</button></div></div><span class="status ${esc(r.status)}">${esc(r.status)}</span></article>`).join('');
+}
+$('ewasteForm').addEventListener('submit',e=>{
+ e.preventDefault();
+ const device=$('device').value, quantity=Number($('quantity').value), area=$('area').value.trim();
+ if(!device||!quantity||quantity<1||!area){notify('Please complete the required fields.');return}
+ const id='ED-'+Date.now().toString().slice(-8);
+ requests.push({id,device,quantity,condition:$('condition').value,method:$('method').value,area,notes:$('notes').value.trim(),status:'Submitted',date:new Date().toLocaleDateString()});
+ save();e.target.reset();$('quantity').value='1';notify('Demo request '+id+' created. It is stored in this browser only.');$('dashboard').scrollIntoView({behavior:'smooth',block:'start'});
+});
+$('requestList').addEventListener('click',e=>{
+ const b=e.target.closest('button[data-action]');if(!b)return;
+ const {action,id}=b.dataset;
+ if(action==='Delete'){requests=requests.filter(r=>r.id!==id);save();notify('Demo request deleted.');return}
+ const item=requests.find(r=>r.id===id);if(item){item.status=action;save();notify('Demo status updated to '+action+'.')}
+});
+$('search').addEventListener('input',render);$('statusFilter').addEventListener('change',render);
+$('exportBtn').addEventListener('click',()=>{
+ if(!requests.length){notify('There are no requests to export yet.');return}
+ const columns=['id','date','device','quantity','condition','method','area','notes','status'];
+ const quote=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+ const csv=[columns.join(','),...requests.map(r=>columns.map(c=>quote(r[c])).join(','))].join('\r\n');
+ const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='ecodispose-demo-requests.csv';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);notify('CSV export created.');
+});
+render();
+</script>
+</body>
+</html>
